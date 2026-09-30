@@ -1,0 +1,9 @@
+FROM maven:3.9-eclipse-temurin-17 AS build
+WORKDIR /app
+COPY pom.xml .
+COPY api-service/pom.xml api-service/pom.xml
+COPY api-service/src api-service/src
+RUN mvn -pl api-service -am package -DskipTests
+FROM eclipse-temurin:17-jre
+COPY --from=build /app/api-service/target/api-service-1.0.0.jar app.jar
+ENTRYPOINT ["java","-jar","/app.jar"]

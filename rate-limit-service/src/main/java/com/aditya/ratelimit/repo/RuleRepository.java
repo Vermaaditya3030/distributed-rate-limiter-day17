@@ -1,0 +1,1 @@
+package com.aditya.ratelimit.repo; import com.aditya.ratelimit.model.RateLimitRule; import org.springframework.data.jpa.repository.JpaRepository; import java.util.*; public interface RuleRepository extends JpaRepository<RateLimitRule,Long>{Optional<RateLimitRule> findByClientId(String clientId);}
