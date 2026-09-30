@@ -31,7 +31,7 @@ git init
 git add .
 git commit -m "Day 17 distributed rate limiter"
 git branch -M main
-git remote add origin https://github.com/YOUR_USERNAME/distributed-rate-limiter-day17.git
+git remote add origin https://github.com/Vermaaditya3030/distributed-rate-limiter-day17.git
 git push -u origin main
 ```
 
